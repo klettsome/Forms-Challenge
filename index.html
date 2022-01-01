@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Forms Challenge</title>
+  </head>
+  <body>
+    <head>
+      <h1>Contact Us</h1>
+    </head>
+    <main>
+      <form action="/" method="POST">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="user-name">Your Name</label>
+              <input type="text" name="userName" id="user-name" required />
+            </li>
+            <li>
+              <label for="user-email">Your E-Mail Address</label>
+              <input type="email" name="userEmail" id="user-email" required />
+            </li>
+            <li>
+              <label for="user-phone">Your Phone Number</label>
+              <input
+                type="tel"
+                name="userPhone"
+                id="user-phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
+                placeholder="123-456-7890"
+              />
+            </li>
+          </ul>
+        </section>
+        <section>
+          <label for="user-message">Your Message</label>
+          <textarea
+            name="userMessage"
+            id="user-message"
+            rows="5"
+            required
+          ></textarea>
+        </section>
+        <section>
+          <label for="user-search">How did you find us?</label>
+          <select name="userSearch" id="user-search" required>
+            <option value="web">Web Search</option>
+            <option value="mouth">Word of Mouth</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
+        <section class="mb">
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="call"
+                value="call"
+                required
+              />
+              <label for="call">Call me</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="email"
+                value="email"
+                required
+              />
+              <label for="email">Send me an email</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="dont-reply"
+                value="dont-reply"
+                required
+              />
+              <label for="dont-reply">Don't reply</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" id="terms" name="terms" />
+            <label for="terms">Accept Terms</label>
+          </div>
+        </section>
+        <section class="btn-container">
+          <ul class="form-control-inline">
+            <li>
+              <button type="reset" class="btn-reset">Clear</button>
+            </li>
+            <li>
+              <button type="submit" class="btn-submit">Submit</button>
+            </li>
+          </ul>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
