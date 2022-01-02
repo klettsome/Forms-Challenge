@@ -8,9 +8,9 @@
     <title>Forms Challenge</title>
   </head>
   <body>
-    <head>
+    <header>
       <h1>Contact Us</h1>
-    </head>
+    </header>
     <main>
       <form action="/" method="POST">
         <section>
@@ -35,75 +35,77 @@
                 placeholder="123-456-7890"
               />
             </li>
+            <li>
+              <label for="user-message">Your Message</label>
+              <textarea
+                name="userMessage"
+                id="user-message"
+                rows="6"
+                required
+              ></textarea>
+            </li>
           </ul>
         </section>
+
         <section>
-          <label for="user-message">Your Message</label>
-          <textarea
-            name="userMessage"
-            id="user-message"
-            rows="5"
-            required
-          ></textarea>
-        </section>
-        <section>
-          <label for="user-search">How did you find us?</label>
-          <select name="userSearch" id="user-search" required>
+          <label for="channel">How did you find us?</label>
+          <select name="channel" id="channel" required>
             <option value="web">Web Search</option>
             <option value="mouth">Word of Mouth</option>
             <option value="other">Other</option>
           </select>
         </section>
-        <section class="mb">
+
+        <section>
           <h2>How should we reply?</h2>
           <ul>
             <li class="form-control-inline">
               <input
                 type="radio"
                 name="reply"
-                id="call"
-                value="call"
+                id="reply-phone"
+                value="phone"
                 required
               />
-              <label for="call">Call me</label>
+              <label for="reply-phone">Call me</label>
             </li>
             <li class="form-control-inline">
               <input
                 type="radio"
                 name="reply"
-                id="email"
+                id="reply-email"
                 value="email"
                 required
               />
-              <label for="email">Send me an email</label>
+              <label for="reply-email">Send me an email</label>
             </li>
             <li class="form-control-inline">
               <input
                 type="radio"
                 name="reply"
-                id="dont-reply"
-                value="dont-reply"
+                id="reply-none"
+                value="none"
                 required
               />
-              <label for="dont-reply">Don't reply</label>
+              <label for="reply-none">Don't reply</label>
             </li>
           </ul>
         </section>
+
         <section>
           <div class="form-control-inline">
-            <input type="checkbox" id="terms" name="terms" />
-            <label for="terms">Accept Terms</label>
+            <input
+              type="checkbox"
+              id="accept-terms"
+              name="accept-terms"
+              required
+            />
+            <label for="accept-terms">Accept Terms</label>
           </div>
         </section>
         <section class="btn-container">
-          <ul class="form-control-inline">
-            <li>
-              <button type="reset" class="btn-reset">Clear</button>
-            </li>
-            <li>
-              <button type="submit" class="btn-submit">Submit</button>
-            </li>
-          </ul>
+          <button type="reset" class="btn-empty">Clear</button>
+          <button type="submit" class="btn-filled">Submit</button>
         </section>
       </form>
     </main>

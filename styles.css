@@ -1,53 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 body {
-  background-color: rgb(232, 246, 252);
+  background-color: rgb(236, 252, 253);
   font-family: 'Open Sans', sans-serif;
 }
 
-.mb {
-  margin-bottom: 10px;
+section {
+  margin-bottom: 1rem;
 }
 
 .btn-container {
-  display: flex;
-  justify-content: end;
-  padding: 20px 0;
+  text-align: right;
 }
 
 h1 {
+  margin: 2rem;
   text-align: center;
-  font-size: 3rem;
 }
 
 form {
-  margin: 0 auto;
-  padding: 0 0.9rem;
-  width: 37.5rem;
-  background-color: rgb(237, 242, 248);
-  border-radius: 8px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-}
-
-input,
-textarea,
-select {
-  width: 100%;
-  margin: 6px 0;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid rgb(218, 218, 218);
-  box-sizing: border-box;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  background-color: rgb(149, 205, 229);
-}
-
-textarea {
-  resize: none;
+  margin: auto;
+  padding: 1rem;
+  width: 40rem;
+  background-color: rgb(246, 250, 255);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 ul {
@@ -58,17 +35,38 @@ ul {
 
 label {
   display: block;
+  color: rgb(66, 76, 97);
+  margin: 0.5rem 0;
 }
 
-button,
 input,
 textarea,
 select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgb(152, 159, 184);
+  box-sizing: border-box;
   font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: rgb(217, 227, 247);
+}
+
+textarea {
+  resize: none;
 }
 
 .form-control-inline {
   display: flex;
+}
+
+.form-control-inline label {
+  margin: 0;
 }
 
 .form-control-inline input {
@@ -77,30 +75,29 @@ select {
 }
 
 button {
-  border: 1px solid rgb(180, 179, 179);
-  padding: 5px 15px;
-  width: 84.9px;
+  font: inherit;
+  border: 1px solid rgb(51, 67, 100);
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 
-.btn-reset {
-  margin-right: 5px;
+.btn-empty {
   background-color: transparent;
-  color: rgb(51, 51, 51);
+  color: rgb(51, 67, 100);
 }
 
-.btn-submit {
-  background-color: rgb(2, 31, 66);
+.btn-filled {
+  background-color: rgb(51, 67, 100);
   color: white;
 }
 
-.btn-reset:hover {
-  background-color: rgb(2, 31, 66);
-  color: white;
+.btn-empty:hover {
+  background-color: rgb(208, 215, 230);
 }
 
-.btn-submit:hover {
-  background-color: transparent;
-  color: rgb(51, 51, 51);
+.btn-filled:hover {
+  border-color: rgb(69, 89, 129);
+  background-color: rgb(69, 89, 129);
 }
